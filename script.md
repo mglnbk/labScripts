@@ -152,9 +152,14 @@ ESC mold:
 
 
 INSERT mold:
-- 
+-  
 
 
+#### 13. Hi-C dataset Normalization Method
+- To compensate for the bias brought by high variation in the genomic data
+- Six methods: <https://doi.org/10.2144/btn-2019-0105>
+
+### 14. 
 
 
 
