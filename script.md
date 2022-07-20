@@ -152,16 +152,61 @@ ESC mold:
 
 
 INSERT mold:
--  
+- i 进入INSERT模式 
 
 
 #### 13. Hi-C dataset Normalization Method
 - To compensate for the bias brought by high variation in the genomic data
 - Six methods: <https://doi.org/10.2144/btn-2019-0105>
 
-### 14. 
+### 14. df.apply()
+```python
+df.apply(lambda x: get_hg38_pos(x["#chr"], x["start"]), axis=1)
+```
+- axis = 1: 对行做apply, 沿着列进行
+- lambda x: 相当于自定义函数$x = f(x)$
+- note: replace is true, no replication
 
+### 15. Hi-C data Query
 
+Power Law?
+- can be downloaded from JuiceBox database maintained by Aiden Lab. 
 
+## 16. Useful snippet to download 
+```python
+import requests, json
 
+def get_meta_data(fname):
+    # Force return from the server in JSON format
+    headers = {'accept': 'application/json'}
+
+    url = f"https://www.encodeproject.org/files/{fname}/"
+
+    # GET the object
+    response = requests.get(url, headers=headers)
+
+    # Extract the JSON response as a Python dictionary
+    biosample = response.json()
+
+    return biosample
+
+# move files
+
+def fmove(src, dest):
+    # src = '../data/encode/' + src
+    # dest = '../data/encode/' + dest
+    dest_dir = os.path.dirname(dest)
+    try:
+        os.makedirs(dest_dir)
+    except os.error as e:
+        pass #Assume it exists.  This could fail if you don't have permissions, etc...
+    shutil.move(src,dest)
+
+```
+
+## 17. 本地端口监听服务器端口
+```shell
+ssh -N -L 9897:localhost:9898 sunzehui@x.x.x.x
+```
+- 本地的9897端口监听远端服务器的9898端口，方便Pycharm的jupyter server configuration, 因为pycharm不能远程连接jupyter server port
 
