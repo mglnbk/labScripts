@@ -172,7 +172,8 @@ df.apply(lambda x: get_hg38_pos(x["#chr"], x["start"]), axis=1)
 Power Law?
 - can be downloaded from JuiceBox database maintained by Aiden Lab. 
 
-## 16. Useful snippet to download 
+### 16. Useful snippet to download 
+
 ```python
 import requests, json
 
@@ -204,9 +205,20 @@ def fmove(src, dest):
 
 ```
 
-## 17. 本地端口监听服务器端口
+### 17. 本地端口监听服务器端口
 ```shell
 ssh -N -L 9897:localhost:9898 sunzehui@x.x.x.x
 ```
 - 本地的9897端口监听远端服务器的9898端口，方便Pycharm的jupyter server configuration, 因为pycharm不能远程连接jupyter server port
+
+### 远程jupyter的启动位置决定了工作目录
+
+[I 10:09:03.499 NotebookApp] Serving notebooks from local directory:
+
+### eQTL 表达数量性状基因位点
+
+eQTL指的是在染色体DNA条带上存在的一段可以控制基因的表达数量性状的DNA片段，分为cis-eQTL以及trans-eQTL，cis主要调控周围邻近1Mb左右的基因区域，而trans则是远程的区域，一般来说我们需要去结合SNP信息和基因表达矩阵来进行eQTL分析，找出表达位点。
+
+### 
+
 
