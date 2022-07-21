@@ -236,6 +236,16 @@ Each cell is labeled with a unique molucule identifier with which can be identif
 - IVT can be used to avoid the bias brought by PCR
 - Unique label is called UMI. Each UMI represents a single cell
 
+### 21. Git push 时候报错 SSL 服务证书未经过签名导致
+
+解决办法设置 将ssl认证为false
+
+```shell
+git config --global http.sslVerify "false"
+```
+
+
+
 
 
 
