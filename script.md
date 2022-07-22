@@ -2,10 +2,87 @@
 
 > 大部分都是描述了实验中遇到的一系列问题和解决方法 
 
+## o. 测序全流程
+
+https://luohao-brian.gitbooks.io/gene_sequencing_book/content/di-3-8282-shu-ju-zhi-kong.html
+
 ## 0. 名词解释
 
 - **DHS**: DNase I Hypersensitivity Site, 常用于指示**TF binding site, mostly, enhancers and promoters**
 - **UMI**: unique molecular identifiers 
+
+## 0. Bioinfo数据格式详细信息
+
+<img src="https://raw.githubusercontent.com/mglnbk/picgo/main/data_format.png?token=ANOO3FPMJQ7GSFRCJB5G6IDC3KG5Q" style="zoom:50%;" />
+
+### I. FASTA数据格式
+
+**FASTA 格式文件中的每个序列信息由两个部分组成：**
+
+**1. 描述行** (The description line, Defline, Header or Identifier line): 以一个大于号(">")开头，内容可以随意，但不能有重复，相当于身份识别信息。
+
+**2. 序列行** (Sequence Line)：一行或多行的核苷酸序列或肽序列，其中碱基对或氨基酸使用单字母代码表示。
+
+- 文件每行的字母一般不应超过80个字符
+
+```shell
+>VIT_1_a_b_c_3|123131|ref|NM_aaaa|mus musculus
+ACGTGCTAGCTAGCTGTTTGCTCCGA
+>VIT_1_a_b_4|123131|ref|NM_aaaa|mus musculus
+AACGTCCCGGGATAGCTGCTACGATGCATGCTCGCTAG
+```
+
+![](https://raw.githubusercontent.com/mglnbk/picgo/main/read_alignment.png?token=ANOO3FPVKXNQZTZDJUUR5YDC3IVGI)
+
+可以说每一个FASTA的序列信息代表着一个READ
+
+**要注意FASTA格式也可以用于表示多种测序结果，比如蛋白质氨基酸**
+
+```shell
+>gi|129295|sp|P01013|OVAX_CHICK GENE X PROTEIN (OVALBUMIN-RELATED)
+QIKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNSFNVATLPAE
+KMKILELPFASGDLSMLVLLPDEVSDLERIEKTINFEKLTEWTNPNTMEKRRVKVYLPQMKIEEKYNLTS
+FLFLIKHNPTNTIVYFGRYWSP
+```
+
+### II. FASTAQ数据格式
+
+相比FASTA信息多了一个Quality Control的ASCII码，pos2pos
+
+```shell
+@EAS54_6_R1_2_1_413_324
+CCCTTCTTGTCTTCAGCGTTTCTCC
++
+;;3;;;;;;;;;;;;7;;;;;;;88
+@EAS54_6_R1_2_1_540_792
+TTGGCAGGCCAAGGCCGATGGATCA
++
+;;;;;;;;;;;7;;;;;-;;;3;83
+@EAS54_6_R1_2_1_443_348
+GTTGCTTCTGGCGTGGGTGGGGGGG
++EAS54_6_R1_2_1_443_348
+;;;;;;;;;;;9;7;;.7;393333
+```
+
+- 第一行：@开头的read标志符号
+- 第二行：序列信息
+- 第三行：+号后可加可不加
+- 第四行：ASCII码质量分数pos2pos
+
+### III. BAM/SAM数据格式
+
+- **SAM**
+
+  SAM(Sequence Alignment/Map)格式是⼀种通⽤的⽐对格式,⽤来存储reads到参考序列的⽐对信息。
+
+- **BAM**
+
+### IV. BED/BEDPE数据格式
+
+1. **Chromosome**
+2. **Chr Start**
+3. **Chr End**
+4. **Supplementary Info**
 
 ### 1. Pycharm Jupyter的配置
 
@@ -229,7 +306,7 @@ eQTL指的是在染色体DNA条带上存在的一段可以控制基因的表达�
 
 ### 20. single-cell RNA sequencing
 
-![](https://raw.githubusercontent.com/mglnbk/picgo/main/scRNA-seq.PNG?token=ANOO3FNX4FQZGD7K5EMSAXTC3E6BI)
+![](https://github.com/mglnbk/picgo/blob/main/read_alignment.png)
 
 Each cell is labeled with a unique molucule identifier with which can be identified at the last step of clustering. 
 
