@@ -321,6 +321,19 @@ Each cell is labeled with a unique molucule identifier with which can be identif
 git config --global http.sslVerify "false"
 ```
 
+### 22. Git push 时候由于使用VPN代理后导致push time_out
+
+运行以下代码即可
+
+```shell
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+即设置代理再取消代理
+
 
 
 
