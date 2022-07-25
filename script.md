@@ -334,9 +334,9 @@ git config --global --unset https.proxy
 
 即设置代理再取消代理
 
+### 23. nohup + command + &
 
-
-
+后台挂起，按Ctrl+C，让进程在后台运行。
 
 
 
