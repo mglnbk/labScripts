@@ -338,5 +338,50 @@ git config --global --unset https.proxy
 
 后台挂起，按Ctrl+C，让进程在后台运行。
 
+### 24. 查看文件行数
 
+```shell
+wc -l [file_name] 
+```
 
+### 25. infoseq [fastaq] 查看文件
+
+- infoseq 包含在emboss的软件包中
+
+```shell
+infoseq [file_name]
+```
+
+### 26. Gene Naming
+
+- Typically standardized gene naming is assigned by the HUGO Gene Nomenclature Committee (HGNC)
+
+### 27. 下载文章中的Data来源（SRA，GEO）
+
+使用NCBI 提供的 Entrez接口
+
+- **已知SRA Project ID号**
+
+```shell
+esearch -db sra -query PRJEB13208 | efetch -format runinfo > runinfo.csv
+```
+
+- **已知GEO Project ID号**
+
+```shell
+esearch -db gdb -query GSE1212312 | efetch -format runinfo > runinfo.csv
+```
+
+- 使用cut命令，提取SRR符号
+
+```shell
+cat runinfo.csv | cut -f 1,22 -d , | head
+```
+
+### 28. 存储DNA data的网站
+
+- **NCBI**: National Center for Biotechnology Information3
+- **EMBL**: European Molecular Biology Laboratory4
+- DDBJ: DNA Data Bank of Japan5
+
+### 29. 
