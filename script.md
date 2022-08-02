@@ -384,6 +384,7 @@ cat runinfo.csv | cut -f 1,22 -d , | head
 - **EMBL**: European Molecular Biology Laboratory4
 - DDBJ: DNA Data Bank of Japan5
 
+<<<<<<< HEAD
 ### 29. 使用scp下载远程的文件与本地
 
 ```shell
@@ -428,3 +429,6 @@ export SHELL=`which zsh`
 5. install oh-my-zsh using official cmd line tool
 6. modify the `.zshrc` as you like
 7. Enjoy
+=======
+### 29. 
+>>>>>>> e0f1b50b88b706ddefdea1467d0819eee84d9a3f
