@@ -384,4 +384,17 @@ cat runinfo.csv | cut -f 1,22 -d , | head
 - **EMBL**: European Molecular Biology Laboratory4
 - DDBJ: DNA Data Bank of Japan5
 
-### 29. 
+### 29. 使用scp下载远程的文件与本地
+
+```shell
+scp -r sunzehui@ip_address:/path/to/the/file_or_directory /local/diretory
+```
+
+- 当传输文件夹的时候只需要使用`-r`即可，需要设置端口的时候使用**大写**的P来进行设置
+
+```shell
+scp -P port_nb sunzehui@ip:file_path local_path
+```
+
+
+
