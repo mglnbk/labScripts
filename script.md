@@ -396,5 +396,35 @@ scp -r sunzehui@ip_address:/path/to/the/file_or_directory /local/diretory
 scp -P port_nb sunzehui@ip:file_path local_path
 ```
 
+### 30. conda fails to create environment from yml
+> scripted from https://stackoverflow.com/questions/55554431/conda-fails-to-create-environment-from-yml
+- Note that `.yml` is platform specific, to prevent it from happening
 
+```shell
+conda env export -n py36 -f py36.yml --no-builds
+```
+ this command can be done at some issue, hwoever, we recommend the command below
 
+```shell
+conda env export -n py36 -n py36 -f py36.yml --from-history
+```
+The commands above will create a new .yml file which you can use
+- 要注意到这样创建的yml文件的首行name是你在运行命令时候的环境名字，为避免重复需要去改变一下
+
+```shell
+conda env create -f environment.yml
+```
+
+### 31. Use zsh and Oh-My-Zsh in the remote server
+1. Install ZSH in your server
+2. `echo $SHELL` prints out the main shell type you use
+3. modify the `.bashrc` or `.profile` or `.bash_profile`, add the code below
+```shell
+export SHELL=`which zsh`
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
+```
+- Note that the three files above may not be equally choosed in different OS, prefer to write in `.profile` or `.bash_profile`
+4. log out and login
+5. install oh-my-zsh using official cmd line tool
+6. modify the `.zshrc` as you like
+7. Enjoy
