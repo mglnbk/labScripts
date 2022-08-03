@@ -428,7 +428,7 @@ export SHELL=`which zsh`
 5. install oh-my-zsh using official cmd line tool
 6. modify the `.zshrc` as you like
 7. Enjoy
-### 29.  Export 路径
+### 29. Export 路径
 
 - 在工作中如果需要检索某一个特定的包或者路径，可以将路径在`.bash_profile`或者`.zshrc`中添加，这取决于用的shell是bash还是zsh，格式如下：
 
@@ -436,5 +436,5 @@ export SHELL=`which zsh`
 export PATH="path/to/some/where$PATH"
 ```
 
-
+### 30.  
 
