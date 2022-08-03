@@ -220,6 +220,14 @@ ssh -N -L 9898:localhost:9898 sunzehui@172.16.75.132
 ![](https://raw.githubusercontent.com/mglnbk/picgo/main/CRISPERi-FlowFISH.jpg?token=ANOO3FKZ3WEH3653L3PEAXDC3E54M)
 
 ### 12. Vim-Learn
+
+**需要安装的插件**
+
+- NERDTree
+- YouCompleteMe
+
+
+
 ESC mold:
 - i 切换至INSERT
 - o 切换到下一行并转入INSERT
@@ -433,8 +441,25 @@ export SHELL=`which zsh`
 - 在工作中如果需要检索某一个特定的包或者路径，可以将路径在`.bash_profile`或者`.zshrc`中添加，这取决于用的shell是bash还是zsh，格式如下：
 
 ```shell
-export PATH="path/to/some/where$PATH"
+export PATH="path/to/some/where:$PATH"
 ```
 
-### 30.  
+### 30. iterm2 Learn
+
+- 使用 cmd+opt+上下左右来切换iterm中的单个tab分屏
+- 使用 cmd+d 或者 cmd+shift+d 来进行左右分屏或者上下分屏
+- 使用 cmd+w 来关闭当前的分屏
+- 使用 ctrl+w 撤销前面输入的一个词
+- 使用 ctrl+u 撤销一整句话
+- 使用 ctrl
+
+### 31. zsh必备插件
+
+- powerlevel10k
+- zsh-autosuggestions
+- zsh-autohighlighting
+
+### 32. 安装在本地用户`./local`
+
+一般来说，我们在安装文件的时候，默认是安装在`/usr/bin`，然而这需要一个`sudo`权限，这时候我们可以利用`./config --prefix=$HOME/.local`在下载命令前添加来实现自定义下载
 
