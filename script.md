@@ -448,12 +448,12 @@ export PATH="path/to/some/where:$PATH"
 
 ### 30. iterm2 Learn
 
-- 使用 cmd+opt+上下左右来切换iterm中的单个tab分屏
-- 使用 cmd+d 或者 cmd+shift+d 来进行左右分屏或者上下分屏
-- 使用 cmd+w 来关闭当前的分屏
-- 使用 ctrl+w 撤销前面输入的一个词
-- 使用 ctrl+u 撤销一整句话
-- 使用 ctrl
+- 使用 `cmd+opt+上下左右`来切换iterm中的单个tab分屏
+- 使用 `cmd+d` 或者 `cmd+shift+d` 来进行左右分屏或者上下分屏
+- 使用 `cmd+w` 来关闭当前的分屏
+- 使用 `ctrl+w` 撤销前面输入的一个词
+- 使用 `ctrl+u` 撤销一整句话
+- 使用 `ctrl`
 
 ### 31. zsh必备插件
 
@@ -464,4 +464,70 @@ export PATH="path/to/some/where:$PATH"
 ### 32. 安装在本地用户`./local`
 
 一般来说，我们在安装文件的时候，默认是安装在`/usr/bin`，然而这需要一个`sudo`权限，这时候我们可以利用`./config --prefix=$HOME/.local`在下载命令前添加来实现自定义下载
+
+
+
+### 33. `samtools`的最常见用法 sort and index
+
+```shell
+samtools sort -@ 8 test.bam -o test.sorted.bam` && `samtools index -@ 8 test.sorted.bam
+```
+
+
+
+### 34. macs call peaks 参数解释
+
+```shell
+macs2 callpeak \
+-t example_chr22/input_data/Chromatin/wgEncodeUwDnaseK562AlnRep1.chr22.bam \
+-n wgEncodeUwDnaseK562AlnRep1.chr22.macs2 \
+-f BAM \
+-g hs \
+-p .1 \
+--call-summits \
+--outdir example_chr22/ABC_output/Peaks/ 
+```
+
+
+
+### 35. bedtools 用法
+
+- narrowPeak文件进行sort
+
+  ```bedtools sort -faidx chrom_size -i your_narrowPeak > your_narrowPeak.sorted```
+
+
+
+### 36. pip pkg `pyfaidx`
+
+- 可以用来快速获知某个参考基因组的染色体大小
+
+  `faidx -i chromsizes input.fa > output.chromsizes`
+
+
+
+### 37. `awk`指令用途
+
+- 添加一列并且用指定delimeter
+
+  ```shell
+  awk 'BEGIN{OFS="\t"}{print $1,$2,$3,'0',$5,log($11),$12}' inputfile > outputfile
+  ```
+
+  - `$INT` refers to which col, $5 refers to fifth col
+  - you can insert specific symbol to form a new col anywhere you want, like `'0'` in the above example which is inserted between `$3` and `$5`
+
+
+
+### 33. Question
+
+
+
+1. Pseudo-replicated or replicated
+2. 多个bed.gz数据如何合一
+3. 某一个细胞的测序.bam数据是否有一个统一的标准
+
+
+
+
 
