@@ -219,7 +219,7 @@ macs2 callpeak \
   - NAME_summits.bed
   - NAME_peaks.broadPeak
   - NAME_peaks.gappedPeak
-  - NAME_model.r
+  - NAME_model.r: `Rscript ....r`
 
 
 
