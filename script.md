@@ -1,5 +1,9 @@
 [Toc]
 
+
+
+
+
 # I. Bioinfo Module
 
 ### 1. 测序全流程
@@ -615,6 +619,43 @@ export PATH="path/to/some/where:$PATH"
 
   - `$INT` refers to which col, $5 refers to fifth col
   - you can insert specific symbol to form a new col anywhere you want, like `'0'` in the above example which is inserted between `$3` and `$5`
+
+
+
+### 30. `tmux`的配置
+
+
+
+### 31. vim解决一些包依赖安装需要root权限的方法
+
+```shell
+mkdir ~/usr/local
+cd <path_to_ncurses>
+tar xzvf <ncurses>.tar.gz # change the tar command if it is not a tar.gz
+cd <ncurses>
+./configure --prefix=$HOME/usr/local
+make
+make install
+cd <path_to_vim>
+LDFLAGS=-L$HOME/usr/local/lib ./configure # then add any options e.g. --prefix=$HOME/usr/local
+make
+make install
+```
+
+
+
+```shell
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-python3interp=yes \
+            --with-python3-config-dir=/usr/bin/python3-config \ # 指定python3-config的位置，如若出现版本问题，可换为虚拟环境
+            --enable-gui=gtk2 \
+            --enable-cscope \
+            --enable-fail-if-missing \
+            --prefix=/usr/local
+```
+
+
 
 
 
