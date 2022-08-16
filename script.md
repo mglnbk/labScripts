@@ -455,6 +455,8 @@ git config --global --unset https.proxy
 
 即设置代理再取消代理
 
+https://greasyfork.org/zh-CN/scripts/412245-github-%E5%A2%9E%E5%BC%BA-%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD
+
 
 
 ### 16. nohup + command + &
@@ -623,6 +625,8 @@ export PATH="path/to/some/where:$PATH"
 
 
 ### 30. `tmux`的配置
+
+
 
 
 
