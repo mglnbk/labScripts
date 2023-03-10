@@ -1,0 +1,134 @@
+{
+  "main": {
+    "id": "cd4108982dd22ab2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e80644b671a7c8d0",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f7a4204406f33e41",
+    "type": "split",
+    "children": [
+      {
+        "id": "675cfa77a044fd53",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "504f1e62fbbd14b5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "39afccde7490c31c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dc741f985512a5e1",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "08c3210fcf9ba403",
+    "type": "split",
+    "children": [
+      {
+        "id": "5842aba37def6fe9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "afb3fa611a992a68",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "490dd400fecb62a2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "543b5d447b2329b6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "92c063374ff2d29d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "e80644b671a7c8d0",
+  "lastOpenFiles": [
+    "BM2000类型索引.md",
+    "paper-2.md",
+    "paper-4.md",
+    "2022-08-20.md",
+    "Shell Programming.md",
+    "Shell Programming-Zehui-MacPro.md",
+    "weekly_progress.md",
+    "paper-1.md"
+  ]
+}

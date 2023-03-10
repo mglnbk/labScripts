@@ -247,6 +247,30 @@ macs2 callpeak \
 
 
 
+### 15. 使用igv overlay tracks 实现不同的IGV可视化
+
+- overlay之后可以对不同的track设置不同颜色，从而对不同的file实现可视化
+
+
+
+### 16. 使用UCSC-bigWigMerge工具进行bigwig的merge
+
+
+
+### 17. pip install 和 anaconda
+
+using pip install will only install tensorflow-datasets in system python installation, which cant be used inside anaconda environment
+
+so I need to use conda install instead
+
+
+
+### 18. 使用pandas的`stack()`函数进行展开
+
+将原本的行-列模式展开为multi-index模式
+
+
+
 # II. Server Module
 
 > 大部分都是描述了实验中遇到的一系列问题和解决方法 
@@ -662,12 +686,6 @@ make install
 
 
 
-
-### 30. Question
-
-1. Pseudo-replicated or replicated
-2. 多个bed.gz数据如何合一
-3. 某一个细胞的测序.bam数据是否有一个统一的标准
 
 
 
