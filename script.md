@@ -265,9 +265,13 @@ so I need to use conda install instead
 
 
 
-### 18. 使用pandas的`stack()`函数进行展开
+### 18. pandas的`stack()`函数、`pivot_table()`、`melt()`
 
-将原本的行-列模式展开为multi-index模式
+`stack()`：行列的excel-like的表格转entry-like的条目式表格
+
+`pivot_table()`：entry-like的条目式表格转行列的excel-like的表格
+
+`melt()`：行列的excel-like的表格转entry-like的条目式表格
 
 
 
