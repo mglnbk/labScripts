@@ -264,7 +264,6 @@ using pip install will only install tensorflow-datasets in system python install
 so I need to use conda install instead
 
 
-
 ### 18. pandas的`stack()`函数、`pivot_table()`、`melt()`
 
 `stack()`：行列的excel-like的表格转entry-like的条目式表格
@@ -273,7 +272,22 @@ so I need to use conda install instead
 
 `melt()`：行列的excel-like的表格转entry-like的条目式表格
 
+### 19. git的网络设置
+由于墙的原因，Github在一些时候会有http timeout的现象发生。故此我们给出以下的解决方案，在挂起VPN时查看其混合代理接口，只需要将终端git指令转发到该VPN代理端口即可。
+```bash
+git config --global http.proxy 127.0.0.1:7890
+git config --global https.proxy 127.0.0.1:7890
+```
 
+### 20. git的缓冲区清空
+由于一些自己的胡乱submit的缘故，导致缓冲区有点混乱，此时可以使用以下命令清理缓存。
+```bash
+git rm -r --cached .
+```
+在之后使用以下命令将working tree上的版本记录退回。
+```bash
+git reset --soft HEAD~1
+```
 
 # II. Server Module
 
