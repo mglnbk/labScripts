@@ -701,8 +701,12 @@ make install
             --prefix=/usr/local
 ```
 
+### 32. unzip and zip
 
+- unzip xxx.zip -d some\_destinations
 
+- zip -s- zip\_file.zip -O zip\_file\_full.zip # first concat
+  unzip zip\_file\_full.zip # then unzip all\_file\_zip
 
 
 
