@@ -713,3 +713,56 @@ make install
 
 
 
+
+## III. R Language
+
+#### Tidyverse 小技巧
+
+First, remember, the funtion in tidyverse mostly deals with variables (column names e.g)
+
+**增删改查**是关键
+
+
+
+1. 搞清楚tidyselect对象，何时使用`any_of`,` all_of` selection language: https://tidyselect.r-lib.org/reference/language.html
+
+2. `across`, `if_all()` and `if_any()` uses selection language. 事实上，唯一能用到这三个函数的地方大部分只有`mutate()` and `summarise()` 尤其是我们要同时处理多列（多个变量一起的时候尤为重要）。更广泛地说，只要有多列选择的地方，selection 语法就能用，比如`drop_na()`，`filter()`
+
+3. 利用`join()`函数可以实现绝大部分的aggregate的功能以及merge and shrink功能
+
+4. `mutate()` 函数和`select()`相结合可以实现绝大多数增加列，修改列，删除列的功能
+
+5. `filter()` 根据列查行
+
+6. `relocate()`可以改动少量列的相对位置，很有意思的小函数
+
+7. 
+
+   
+
+### 1. R saveRDS() and readRDS() function
+
+They handle the "module" objects io.
+
+
+
+### 2. Scale features
+
+Scale() function center and scale the feture columns across samples. It is used to make them comparable. Even if when we do cluster over feature, we also need to scale feature ops across samples (do it by column for sample by features data)
+
+
+
+### 3. `NbClust()`
+
+A good Grid Search clustering method. But takes time when it comes to a large dataset.
+
+一般用cindex，
+
+
+
+
+
+
+
+
+
