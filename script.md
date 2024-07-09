@@ -759,9 +759,14 @@ A good Grid Search clustering method. But takes time when it comes to a large da
 一般用cindex，
 
 
+### 4. `tapply()`, `apply()`, `sapply()`, `lapply()`, `unlist()`
 
-
-
+- `apply()`没有规定是行是列，需要人为设置1，2来选择, apply(x, MARGIN = 1, FUN)
+- `lapply()`的作用对象是可迭代对象. lappy(X, FUN) but always return a list
+- `unlist()` is used to delist an object
+- `sapply()` does the same as `lapply` but return a vector
+- Note that `sapply()` and `lapply()` both handle the matrices by column
+- `tapply()` needs to take in three parameters, data, group index and function. They apply functions over the group and return a list. Very useful.
 
 
 
